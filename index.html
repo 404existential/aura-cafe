@@ -3,50 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="L'Aura Café & Roastery — An architectural sanctuary of single-origin coffee, artisanal French viennoiserie, and hearth-cooked brunch in SoHo, New York.">
-  <meta name="keywords" content="luxury café, specialty coffee, artisanal roastery, SoHo cafe, brunch, latte art, single origin, French pastries">
-  <meta property="og:title" content="L'Aura Roastery & Café | Artisanal Coffee Sanctuary">
-  <meta property="og:description" content="Handcrafted single-origin coffees, morning viennoiserie, and slow architectural living in SoHo, New York.">
-  <meta property="og:type" content="website">
-  <title>L'AURA | Roastery & Artisanal Café</title>
+  <meta name="description" content="AMARA Botanical Roastery & Café — Single-estate Western Ghats coffees, sourdough bakes, and slow living in Indiranagar, Bengaluru.">
+  <meta name="keywords" content="Amara cafe Bengaluru, Indiranagar cafe, specialty coffee Bangalore, Chikmagalur coffee, artisanal bakery, table reservation">
+  <title>AMARA | Botanical Roastery & Café — Bengaluru</title>
 
-  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury) + Plus Jakarta Sans (Modern Body) -->
+  <!-- Google Fonts: Cormorant Garamond (Editorial Elegance) + Plus Jakarta Sans (Clean Modern Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons for polished UI -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="beige-theme">
 
   <!-- ================= PRELOADER ================= -->
   <div id="preloader" class="preloader">
     <div class="preloader-content">
       <div class="coffee-cup-anim">
         <svg viewBox="0 0 100 100" class="cup-svg">
-          <!-- Rising steam paths -->
           <path class="steam steam-1" d="M38 32 Q32 20 40 10 Q48 0 42 -10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path class="steam steam-2" d="M50 30 Q58 18 50 8 Q42 -2 50 -12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
           <path class="steam steam-3" d="M62 32 Q68 22 60 12 Q52 2 58 -8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <!-- Cup Outline -->
-          <path d="M25 40 L75 40 C75 68 65 78 50 78 C35 78 25 68 25 40 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <!-- Cup handle -->
-          <path d="M74 46 C86 46 86 64 71 66" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <!-- Saucer base -->
-          <path d="M18 84 L82 84" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M25 40 L75 40 C75 68 65 78 50 78 C35 78 25 68 25 40 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M74 46 C86 46 86 64 71 66" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M18 84 L82 84" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="preloader-brand">
-        <span class="brand-monogram">L'AURA</span>
-        <span class="brand-sub">ROASTERY & CAFÉ</span>
+        <span class="brand-monogram">AMARA</span>
+        <span class="brand-sub">BOTANICAL ROASTERY & CAFÉ · BENGALURU</span>
       </div>
       <div class="preloader-bar">
         <div class="preloader-progress" id="preloaderProgress"></div>
       </div>
-      <span class="preloader-status" id="preloaderText">Brewing perfection...</span>
+      <span class="preloader-status" id="preloaderText">Brewing freshness...</span>
     </div>
   </div>
 
@@ -56,38 +49,33 @@
   <!-- ================= NAVIGATION ================= -->
   <header id="mainHeader" class="header">
     <nav class="nav-container">
-      <a href="#hero" class="nav-logo" aria-label="L'Aura Home">
-        <span class="logo-mark">L</span>
-        <span class="logo-text">L'AURA<span class="logo-dot">.</span></span>
+      <a href="#hero" class="nav-logo" aria-label="Amara Café Home">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">AMARA<span class="logo-dot">.</span></span>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">Our Story</a></li>
-        <li><a href="#menu" class="nav-link">Artisanal Menu</a></li>
-        <li><a href="#gallery" class="nav-link">Atmosphere</a></li>
-        <li><a href="#experience" class="nav-link">Craft & Reviews</a></li>
-        <li><a href="#visit" class="nav-link">Visit Us</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Spaces</a></li>
+        <li><a href="#reviews" class="nav-link">Praise</a></li>
+        <li><a href="#visit" class="nav-link">Visit & Contact</a></li>
       </ul>
 
       <div class="nav-actions">
         <!-- Live Status Pill -->
-        <div class="live-status-pill" id="liveStatusBadge" title="Click for café operating hours">
+        <div class="live-status-pill" id="liveStatusBadge">
           <span class="pulse-dot"></span>
-          <span class="status-text">Open Today</span>
+          <span class="status-text">Open in Indiranagar</span>
         </div>
 
-        <button class="btn btn-reserve" id="openReserveBtn">
+        <a href="#reserve" class="btn btn-primary btn-nav">
           <i class="fa-regular fa-calendar-check"></i>
           <span>Book a Table</span>
-        </button>
+        </a>
 
-        <button class="cart-trigger-btn" id="openTastingBagBtn" aria-label="View Tasting Bag">
-          <i class="fa-solid fa-mug-hot"></i>
-          <span class="cart-count" id="cartCountBadge">0</span>
-        </button>
-
-        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -100,22 +88,23 @@
   <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
   <aside class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
-      <div class="drawer-logo">L'AURA<span class="logo-dot">.</span></div>
+      <div class="drawer-logo">AMARA<span class="logo-dot">.</span></div>
       <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
     </div>
     <ul class="drawer-links">
       <li><a href="#hero" class="drawer-link">Home</a></li>
       <li><a href="#about" class="drawer-link">Our Story</a></li>
-      <li><a href="#menu" class="drawer-link">Artisanal Menu</a></li>
-      <li><a href="#gallery" class="drawer-link">Atmosphere & Gallery</a></li>
-      <li><a href="#experience" class="drawer-link">Experience & Accolades</a></li>
+      <li><a href="#menu" class="drawer-link">Menu</a></li>
+      <li><a href="#gallery" class="drawer-link">Spaces & Ambience</a></li>
+      <li><a href="#reviews" class="drawer-link">Guest Reviews</a></li>
+      <li><a href="#reserve" class="drawer-link">Reserve a Table</a></li>
       <li><a href="#visit" class="drawer-link">Location & Hours</a></li>
     </ul>
     <div class="drawer-footer">
-      <button class="btn btn-primary btn-block" id="drawerReserveBtn">Book a Table</button>
+      <a href="#reserve" class="btn btn-primary btn-block" id="drawerReserveBtn">Book a Table</a>
       <div class="drawer-meta">
-        <p><i class="fa-solid fa-location-dot"></i> 412 W Broadway, SoHo, NY</p>
-        <p><i class="fa-solid fa-phone"></i> +1 (212) 555-0194</p>
+        <p><i class="fa-solid fa-location-dot"></i> 12th Main Rd, Indiranagar, Bengaluru</p>
+        <p><i class="fa-solid fa-phone"></i> +91 80 4123 8899</p>
       </div>
     </div>
   </aside>
@@ -123,69 +112,61 @@
   <!-- ================= HERO SECTION ================= -->
   <section id="hero" class="hero-section">
     <div class="hero-bg-container">
-      <img src="assets/images/hero.jpg" alt="L'Aura luxury café interior with warm brass lighting and sleek marble bar" class="hero-bg-image" id="heroBgImage">
+      <img src="assets/images/hero.jpg" alt="Amara warm botanical café interior in Indiranagar, Bengaluru" class="hero-bg-image" id="heroBgImage">
       <div class="hero-overlay"></div>
     </div>
 
     <div class="hero-content-wrapper">
       <div class="container hero-container">
         <div class="hero-badge reveal-fade">
-          <span class="badge-icon"><i class="fa-solid fa-award"></i></span>
-          <span class="badge-text">Michelin Selected Specialty Roastery 2026</span>
+          <span class="badge-icon"><i class="fa-solid fa-seedling"></i></span>
+          <span class="badge-text">Chikmagalur & Coorg Single-Estates · Roasted in Bengaluru</span>
         </div>
 
         <h1 class="hero-title reveal-fade delay-1">
-          Where Rare Terroir Meets <br>
-          <span class="title-italic">Architectural Solace</span>
+          A Sunlit Sanctuary of <br>
+          <span class="title-italic">Craft Coffee & Slow Bakes</span>
         </h1>
 
         <p class="hero-subtitle reveal-fade delay-2">
-          Handcrafted single-origin micro-lots, morning French viennoiserie, and slow seasonal hearth plates. Experience coffee roasted with artisanal reverence in the heart of SoHo.
+          Specialty hill-estate coffees, hand-laminated morning croissants, and tranquil botanical courtyards on 12th Main, Indiranagar.
         </p>
 
         <div class="hero-cta-group reveal-fade delay-3">
           <a href="#menu" class="btn btn-primary hero-btn">
-            <span>Explore Menu</span>
-            <i class="fa-solid fa-arrow-right-long"></i>
+            <span>View Menu</span>
+            <i class="fa-solid fa-arrow-down-long"></i>
           </a>
-          <button class="btn btn-outline hero-btn" id="heroBookBtn">
-            <i class="fa-regular fa-clock"></i>
-            <span>Reserve Table</span>
-          </button>
+          <a href="#reserve" class="btn btn-outline hero-btn">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Book a Table</span>
+          </a>
         </div>
 
         <!-- Hero Highlights Bar -->
         <div class="hero-stats-ribbon reveal-fade delay-4">
           <div class="stat-item">
-            <span class="stat-num">94.8</span>
-            <span class="stat-label">SCA Cupping Score</span>
+            <span class="stat-num">1,450m</span>
+            <span class="stat-label">Estate Harvest Altitude</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <span class="stat-num">100%</span>
-            <span class="stat-label">Direct Trade Micro-Lots</span>
+            <span class="stat-label">Direct Farm Trade</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <span class="stat-num">1968</span>
-            <span class="stat-label">Cast Iron Probat Roaster</span>
+            <span class="stat-num">Fresh Daily</span>
+            <span class="stat-label">Small-Batch Roasting</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <span class="stat-num">4.9★</span>
-            <span class="stat-label">2,400+ Guest Reviews</span>
+            <span class="stat-label">Bengaluru's Best Café 2026</span>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Scroll Indicator -->
-    <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to story">
-      <span class="mouse-scroll">
-        <span class="mouse-wheel"></span>
-      </span>
-      <span class="scroll-text">Scroll Down</span>
-    </a>
   </section>
 
   <!-- ================= ABOUT SECTION ================= -->
@@ -195,77 +176,48 @@
         <!-- Visual Composition Side -->
         <div class="about-visuals-col reveal-left">
           <div class="about-card-main">
-            <img src="assets/images/latte-art.jpg" alt="Artisanal cappuccino with delicate swan latte art" class="about-img-main">
-            <div class="floating-craft-tag">
-              <i class="fa-solid fa-fire-burner"></i>
-              <div>
-                <strong>Fresh Roasted Daily</strong>
-                <span>Small batch roasting on premises</span>
-              </div>
-            </div>
+            <img src="assets/images/latte-art.jpg" alt="Artisanal cappuccino with swan latte art" class="about-img-main">
           </div>
           <div class="about-card-secondary">
-            <img src="assets/images/brunch-croissant.jpg" alt="Artisan croissant with poached egg tartine" class="about-img-sub">
-            <div class="experience-badge">
-              <span class="exp-number">5+</span>
-              <span class="exp-text">Years of Specialty Craft</span>
-            </div>
+            <img src="assets/images/brunch-croissant.jpg" alt="Freshly baked croissant and brunch tartine" class="about-img-sub">
           </div>
         </div>
 
         <!-- Story Text Side -->
         <div class="about-story-col reveal-right">
-          <div class="section-tag">OUR PHILOSOPHY</div>
+          <div class="section-tag">OUR STORY</div>
           <h2 class="section-title">
-            Crafted for the Discerning Senses, <br>
-            <span class="title-highlight">Rooted in Heritage.</span>
+            Rooted in Western Ghats, <br>
+            <span class="title-highlight">Crafted for Bengaluru.</span>
           </h2>
           <p class="story-lead">
-            Founded in 2021 by master roaster Julien Moreau and architectural designer Elena Chen, L'Aura was born from a singular vision: to treat coffee not merely as fuel, but as an elevated sensory ritual.
+            AMARA was created to celebrate the rich, shade-grown coffee heritage of Southern India within a calm, design-forward botanical retreat in Indiranagar.
           </p>
           <p class="story-desc">
-            We partner directly with smallholder coffee farmers across Ethiopia, Colombia, and Yemen, securing high-altitude harvests at equitable prices. Inside our sunlit SoHo sanctuary of fluted walnut, unlacquered brass, and Calacatta marble, each cup is weighed, ground to micro-tolerances, and extracted to unveil hidden notes of bergamot, jasmine, and rich cacao.
+            We source our Arabica micro-lots directly from third-generation family estates in Chikmagalur, Coorg, and Biligirirangana Hills. Roasted fresh in small batches on-site, each pour highlights notes of jaggery, cardamom blossom, and dark chocolate.
           </p>
 
-          <div class="craft-pillars">
-            <div class="pillar-item">
-              <div class="pillar-icon">
-                <i class="fa-solid fa-seedling"></i>
-              </div>
-              <div class="pillar-text">
-                <h4>Single Terroir Traceability</h4>
-                <p>Every bag tracks to individual washing stations and harvest altitudes above 1,800m.</p>
+          <div class="craft-mini-grid">
+            <div class="craft-mini-card">
+              <i class="fa-solid fa-mountain-sun"></i>
+              <div>
+                <h4>Shade-Grown Arabica</h4>
+                <p>Nurtured beneath native silver oak and jungle shade trees at high altitude.</p>
               </div>
             </div>
-
-            <div class="pillar-item">
-              <div class="pillar-icon">
-                <i class="fa-solid fa-bread-slice"></i>
-              </div>
-              <div class="pillar-text">
-                <h4>Heirloom Bakery & Kitchen</h4>
-                <p>72-hour cold fermented laminated brioche and sourdough baked at 4:30 AM every morning.</p>
+            <div class="craft-mini-card">
+              <i class="fa-solid fa-fire-burner"></i>
+              <div>
+                <h4>Micro-Batch Roasting</h4>
+                <p>Profiles calibrated weekly to preserve origin fruit sweetness and floral aromatics.</p>
               </div>
             </div>
-
-            <div class="pillar-item">
-              <div class="pillar-icon">
-                <i class="fa-solid fa-leaf"></i>
+            <div class="craft-mini-card">
+              <i class="fa-solid fa-croissant"></i>
+              <div>
+                <h4>Morning Bakehouse</h4>
+                <p>French butter croissants, sourdough loaves, and seasonal tea cakes baked before sunrise.</p>
               </div>
-              <div class="pillar-text">
-                <h4>Zero-Waste Closed Loop</h4>
-                <p>Spent coffee grounds are composted locally; 100% compostable packaging and solar-assisted roastery.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-signature-wrap">
-            <div class="signature-quote">
-              "We believe true luxury is slowing down for something genuinely extraordinary."
-            </div>
-            <div class="founder-signature">
-              <span class="founder-name">Julien Moreau & Elena Chen</span>
-              <span class="founder-role">Co-Founders & Head Artisans</span>
             </div>
           </div>
         </div>
@@ -277,434 +229,256 @@
   <section id="menu" class="section menu-section">
     <div class="container">
       <div class="section-header text-center reveal-fade">
-        <div class="section-tag">CURATED TASTING REPERTOIRE</div>
-        <h2 class="section-title">The Artisanal Menu</h2>
+        <div class="section-tag">CURATED SELECTIONS</div>
+        <h2 class="section-title">The Café Menu</h2>
         <p class="section-desc">
-          Prepared with single-origin beans, Normandy cultured butter, and seasonal botanicals.
+          Clean, concise selections prepared with fresh estate beans, organic dairy, and slow bakes.
         </p>
 
         <!-- Category Tabs -->
         <div class="menu-tabs-wrapper">
           <div class="menu-tabs" id="menuTabs">
-            <button class="menu-tab-btn active" data-category="all">
-              <i class="fa-solid fa-border-all"></i> All Offerings
-            </button>
-            <button class="menu-tab-btn" data-category="coffee">
-              <i class="fa-solid fa-mug-saucer"></i> Signature Brews
-            </button>
-            <button class="menu-tab-btn" data-category="pourover">
-              <i class="fa-solid fa-droplet"></i> Rare Pour-Overs
-            </button>
-            <button class="menu-tab-btn" data-category="bakery">
-              <i class="fa-solid fa-bread-slice"></i> Viennoiserie
-            </button>
-            <button class="menu-tab-btn" data-category="brunch">
-              <i class="fa-solid fa-utensils"></i> Hearth Brunch
-            </button>
-            <button class="menu-tab-btn" data-category="elixirs">
-              <i class="fa-solid fa-wine-glass"></i> Botanicals & Teas
-            </button>
-          </div>
-        </div>
-
-        <!-- Search & Dietary Filter Bar -->
-        <div class="menu-filter-bar">
-          <div class="menu-search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="menuSearchInput" placeholder="Search menu (e.g. Pistachio, Geisha, Croissant, Oat)...">
-            <button id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search">&times;</button>
-          </div>
-          <div class="dietary-pills">
-            <span class="dietary-filter active" data-dietary="all">All Diets</span>
-            <span class="dietary-filter" data-dietary="Chef's Pick"><i class="fa-solid fa-star"></i> Chef's Pick</span>
-            <span class="dietary-filter" data-dietary="Plant-Based"><i class="fa-solid fa-leaf"></i> Vegan</span>
-            <span class="dietary-filter" data-dietary="Gluten-Free"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> Gluten-Free</span>
+            <button class="menu-tab-btn active" data-category="all">All Items</button>
+            <button class="menu-tab-btn" data-category="espresso">Espresso & Milk</button>
+            <button class="menu-tab-btn" data-category="pourover">Single Estate Manual Brews</button>
+            <button class="menu-tab-btn" data-category="bakery">Artisanal Bakes</button>
+            <button class="menu-tab-btn" data-category="brunch">Hearth Brunch</button>
+            <button class="menu-tab-btn" data-category="refreshers">Cold Sips & Botanicals</button>
           </div>
         </div>
       </div>
 
-      <!-- Menu Grid -->
-      <div class="menu-grid" id="menuGrid">
-        <!-- Dynamically injected via app.js for rich responsiveness & filtering -->
+      <!-- Menu Grid (Clean Editorial List Cards) -->
+      <div class="menu-compact-grid" id="menuGrid">
+        <!-- Dynamically injected via app.js -->
       </div>
 
-      <!-- Menu Footer Note -->
-      <div class="menu-footer-note reveal-fade">
-        <p>
-          <i class="fa-solid fa-circle-info"></i> Dairy alternatives (House-milled Oat, Organic Almond, Macadamia) available at no extra charge. Please inform our baristas of any allergies.
-        </p>
+      <div class="menu-note text-center">
+        <p><i class="fa-solid fa-leaf"></i> Oat milk and almond milk available on request. All taxes included.</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= GALLERY / ATMOSPHERE SECTION ================= -->
+  <!-- ================= SPACES & GALLERY SECTION ================= -->
   <section id="gallery" class="section gallery-section">
     <div class="container">
       <div class="section-header text-center reveal-fade">
-        <div class="section-tag">SPATIAL SENSORY</div>
-        <h2 class="section-title">The Atmosphere</h2>
+        <div class="section-tag">THE SPACE</div>
+        <h2 class="section-title">A Calm Bengaluru Respite</h2>
         <p class="section-desc">
-          An architectural communion between warm walnut joinery, vintage roasting machinery, and morning sunlight.
+          Terrazzo flooring, cane furniture, lush monstera courtyards, and warm sunlit corners.
         </p>
-
-        <!-- Gallery Category Filter -->
-        <div class="gallery-filters" id="galleryFilters">
-          <button class="gallery-filter-btn active" data-gallery-filter="all">All Frames</button>
-          <button class="gallery-filter-btn" data-gallery-filter="ambience">Ambience & Space</button>
-          <button class="gallery-filter-btn" data-gallery-filter="coffee">Barista Craft</button>
-          <button class="gallery-filter-btn" data-gallery-filter="culinary">Pastry & Brunch</button>
-        </div>
       </div>
 
-      <!-- Gallery Grid -->
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- Injected via JavaScript -->
+      <div class="gallery-clean-grid">
+        <div class="gallery-clean-card">
+          <img src="assets/images/hero.jpg" alt="Sunlit coffee bar and espresso machine at Amara Bengaluru" loading="lazy">
+          <div class="gallery-card-label">The Main Coffee Bar · Indiranagar</div>
+        </div>
+        <div class="gallery-clean-card">
+          <img src="assets/images/latte-art.jpg" alt="Pouring latte art at Amara" loading="lazy">
+          <div class="gallery-card-label">Signature Estate Cortado</div>
+        </div>
+        <div class="gallery-clean-card">
+          <img src="assets/images/brunch-croissant.jpg" alt="Artisan croissant and brunch tartine" loading="lazy">
+          <div class="gallery-card-label">Morning Bakehouse & Brunch</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Full-Screen Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal">
-    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
-    <div class="lightbox-content">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <div class="lightbox-img-wrap">
-        <img src="" alt="" id="lightboxImg">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-      </div>
-      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- ================= EXPERIENCE & REVIEWS SECTION ================= -->
-  <section id="experience" class="section experience-section">
+  <!-- ================= REVIEWS SECTION ================= -->
+  <section id="reviews" class="section reviews-section">
     <div class="container">
       <div class="section-header text-center reveal-fade">
-        <div class="section-tag">GUEST PRAISE & CRITICAL ACCLAIM</div>
-        <h2 class="section-title">What Connoisseurs Say</h2>
-        <p class="section-desc">
-          Recognized by leading food & lifestyle publications for elevating coffee culture into fine art.
-        </p>
+        <div class="section-tag">COMMUNITY PRAISE</div>
+        <h2 class="section-title">Kind Words From Guests</h2>
       </div>
 
-      <!-- Press Quotes Ribbon -->
-      <div class="press-strip reveal-fade">
-        <div class="press-logo-card">
-          <span class="press-publication">VOGUE LIVING</span>
-          <p>"The most beautiful coffee sanctuary in lower Manhattan. An absolute masterclass in restrained luxury."</p>
+      <div class="press-badges-row reveal-fade">
+        <div class="press-badge">
+          <span class="press-title">LBB BENGALURU</span>
+          <p>"The prettiest slow-brew café in Indiranagar. Their Chikmagalur pour-over is unparalleled."</p>
         </div>
-        <div class="press-logo-card featured">
-          <span class="press-publication">MICHELIN GUIDE</span>
-          <p>"Rare single-origins roasted with exacting French precision. The pistachio viennoiserie is unmissable."</p>
+        <div class="press-badge featured">
+          <span class="press-title">CONDÉ NAST TRAVELLER</span>
+          <p>"A masterclass in tropical minimalism. Exceptional bakes and serene courtyards."</p>
         </div>
-        <div class="press-logo-card">
-          <span class="press-publication">SPRUDGE</span>
-          <p>"A modern temple for serious coffee lovers. Setting the new benchmark for global specialty spaces."</p>
+        <div class="press-badge">
+          <span class="press-title">BANGALORE TIMES</span>
+          <p>"The go-to morning sanctuary for Bengaluru's design and specialty coffee crowd."</p>
         </div>
       </div>
 
-      <!-- Testimonial Slider / Cards -->
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal-fade">
-          <div class="rating-stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonial-quote">
-            "The Smoked Vanilla Flat White alongside their warm raspberry rose croissant is arguably the best morning combination anywhere in New York City. The interior details make you want to stay for hours."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SC</div>
-            <div>
-              <h5 class="author-name">Sophia Castellano</h5>
-              <span class="author-tag">Architect & Coffee Enthusiast</span>
-            </div>
-          </div>
+      <div class="reviews-compact-grid">
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Easily the best flat white in Indiranagar. The aesthetic is so calming—perfect for a quiet read or meeting."</p>
+          <span class="review-user">— Ananya Rao, Architect</span>
         </div>
-
-        <div class="testimonial-card reveal-fade delay-1">
-          <div class="rating-stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonial-quote">
-            "Their Panama Geisha pour-over was a revelation — vibrant notes of bergamot blossom and white peach that shifted as the cup cooled. The staff speaks with genuine passion and zero pretension."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div>
-              <h5 class="author-name">Marcus Reynolds</h5>
-              <span class="author-tag">Sommelier & Food Writer</span>
-            </div>
-          </div>
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"The almond croissant paired with the cold brew tonic made my Sunday. Courteous staff who genuinely know coffee."</p>
+          <span class="review-user">— Rohan Menon, Food Writer</span>
         </div>
-
-        <div class="testimonial-card reveal-fade delay-2">
-          <div class="rating-stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testimonial-quote">
-            "Reserved the Velvet Lounge for a client brunch meeting. The service was impeccable, quiet acoustic ambiance, and the truffle brioche poached egg was sheer culinary perfection."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AL</div>
-            <div>
-              <h5 class="author-name">Aria Lin</h5>
-              <span class="author-tag">Creative Director, SoHo</span>
-            </div>
-          </div>
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Booking a table was effortless, and the outdoor courtyard seating feels like a calm oasis away from Bengaluru traffic."</p>
+          <span class="review-user">— Priya Sundaram, Creative Lead</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= RESERVATION & VISIT SECTION ================= -->
+  <!-- ================= EASY RESERVATION SECTION ================= -->
+  <section id="reserve" class="section reserve-section">
+    <div class="container">
+      <div class="reserve-wrap reveal-fade">
+        <div class="reserve-header text-center">
+          <div class="section-tag">EASY TABLE BOOKING</div>
+          <h2 class="section-title">Book a Table at AMARA</h2>
+          <p class="reserve-intro">
+            Quick 1-minute reservation. Instant confirmation on screen & WhatsApp/SMS.
+          </p>
+        </div>
+
+        <form id="easyReserveForm" class="easy-reserve-form">
+          <div class="form-grid">
+            <div class="field-item">
+              <label for="clientName"><i class="fa-regular fa-user"></i> Your Name</label>
+              <input type="text" id="clientName" placeholder="e.g. Vikram Sharma" required>
+            </div>
+
+            <div class="field-item">
+              <label for="clientPhone"><i class="fa-solid fa-phone"></i> Phone / WhatsApp</label>
+              <input type="tel" id="clientPhone" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="field-item">
+              <label for="bookDate"><i class="fa-regular fa-calendar"></i> Date</label>
+              <input type="date" id="bookDate" required>
+            </div>
+
+            <div class="field-item">
+              <label for="bookTime"><i class="fa-regular fa-clock"></i> Preferred Time</label>
+              <select id="bookTime" required>
+                <option value="8:30 AM">8:30 AM · Morning Brew</option>
+                <option value="11:00 AM" selected>11:00 AM · Brunch & Bakes</option>
+                <option value="1:30 PM">1:30 PM · Lunch & Coffee</option>
+                <option value="4:30 PM">4:30 PM · Afternoon Tea & Pour-Over</option>
+                <option value="7:00 PM">7:00 PM · Evening Sips</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="bookGuests"><i class="fa-solid fa-users"></i> Guests</label>
+              <select id="bookGuests" required>
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6+">6+ Group Table</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="bookArea"><i class="fa-solid fa-chair"></i> Seating Preference</label>
+              <select id="bookArea">
+                <option value="Botanical Courtyard">Botanical Courtyard (Garden)</option>
+                <option value="Sunlit Indoor Atrium" selected>Sunlit Indoor Atrium</option>
+                <option value="Brew Bar Counter">Brew Bar Counter</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-item full-width">
+            <label for="bookNote"><i class="fa-regular fa-message"></i> Special Note (Optional)</label>
+            <input type="text" id="bookNote" placeholder="Anniversary, window table, quiet spot for working, etc.">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block reserve-btn">
+            <i class="fa-regular fa-circle-check"></i>
+            <span>Confirm Reservation</span>
+          </button>
+          <span class="reserve-note-text">No deposit needed. Free cancellation anytime. Walk-ins are always welcome.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VISIT & CONTACT SECTION ================= -->
   <section id="visit" class="section visit-section">
     <div class="container">
       <div class="visit-grid">
-        <!-- Interactive Booking Form Card -->
-        <div class="reservation-card reveal-left">
-          <div class="res-card-header">
-            <div class="section-tag">TABLE CONCIERGE</div>
-            <h3 class="res-title">Reserve Your Experience</h3>
-            <p class="res-subtitle">Walk-ins are always warmly welcomed at our espresso bar. For table seating, afternoon tea, or weekend brunch, we recommend booking in advance.</p>
+        <!-- Info Column -->
+        <div class="visit-info-box">
+          <div class="section-tag">LOCATION & HOURS</div>
+          <h3 class="visit-heading">Visit Us in Bengaluru</h3>
+
+          <div class="visit-detail-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Indiranagar Flagship</strong>
+              <p>742, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038</p>
+              <span class="transit-note">Nearby Metro: Indiranagar Metro Station (5 min walk)</span>
+            </div>
           </div>
 
-          <form id="reservationForm" class="reservation-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="resLocation"><i class="fa-solid fa-location-dot"></i> Sanctuary Location</label>
-                <select id="resLocation" class="form-control" required>
-                  <option value="SoHo Flagship">SoHo Flagship (412 W Broadway)</option>
-                  <option value="Brooklyn Roastery">Brooklyn Atrium & Roastery (18 Bridge St)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="resGuests"><i class="fa-solid fa-user-group"></i> Party Size</label>
-                <select id="resGuests" class="form-control" required>
-                  <option value="1">1 Person (Solo Slow Bar)</option>
-                  <option value="2" selected>2 Guests (Intimate Table)</option>
-                  <option value="3">3 Guests</option>
-                  <option value="4">4 Guests (Lounge Seating)</option>
-                  <option value="5">5 Guests</option>
-                  <option value="6+">6+ Guests (Private Tasting Table)</option>
-                </select>
-              </div>
+          <div class="visit-detail-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Opening Hours</strong>
+              <p>Monday – Friday: 7:30 AM – 10:30 PM</p>
+              <p>Saturday – Sunday: 7:00 AM – 11:00 PM</p>
             </div>
+          </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="resDate"><i class="fa-regular fa-calendar"></i> Select Date</label>
-                <input type="date" id="resDate" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label for="resTime"><i class="fa-regular fa-clock"></i> Preferred Time Slot</label>
-                <select id="resTime" class="form-control" required>
-                  <option value="08:00 AM">08:00 AM — Morning First Light</option>
-                  <option value="09:30 AM">09:30 AM — Breakfast & Roasting</option>
-                  <option value="11:30 AM" selected>11:30 AM — High Noon Brunch</option>
-                  <option value="01:30 PM">01:30 PM — Afternoon Quiet Hours</option>
-                  <option value="03:30 PM">03:30 PM — Pour-Over & Pastry Ritual</option>
-                  <option value="05:30 PM">05:30 PM — Golden Hour Aperitivo</option>
-                  <option value="07:30 PM">07:30 PM — Evening Dessert & Tonics</option>
-                </select>
-              </div>
+          <div class="visit-detail-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Direct Inquiries</strong>
+              <p><a href="tel:+918041238899">+91 80 4123 8899</a> · <a href="mailto:namaste@amaracafe.in">namaste@amaracafe.in</a></p>
             </div>
-
-            <div class="form-group">
-              <label for="resSeating"><i class="fa-solid fa-chair"></i> Seating Preference</label>
-              <div class="seating-chips-wrap">
-                <label class="seating-chip">
-                  <input type="radio" name="seatingPref" value="Sunlit Atrium" checked>
-                  <span><i class="fa-solid fa-sun"></i> Sunlit Atrium</span>
-                </label>
-                <label class="seating-chip">
-                  <input type="radio" name="seatingPref" value="Velvet Lounge">
-                  <span><i class="fa-solid fa-couch"></i> Velvet Lounge</span>
-                </label>
-                <label class="seating-chip">
-                  <input type="radio" name="seatingPref" value="Barista Slow Bar">
-                  <span><i class="fa-solid fa-coffee"></i> Barista Slow Bar</span>
-                </label>
-                <label class="seating-chip">
-                  <input type="radio" name="seatingPref" value="Courtyard Garden">
-                  <span><i class="fa-solid fa-tree"></i> Courtyard Garden</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="resName"><i class="fa-regular fa-user"></i> Full Name</label>
-                <input type="text" id="resName" class="form-control" placeholder="e.g. Eleanor Vance" required>
-              </div>
-              <div class="form-group">
-                <label for="resPhone"><i class="fa-regular fa-envelope"></i> Email or Phone</label>
-                <input type="text" id="resPhone" class="form-control" placeholder="eleanor@domain.com" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="resNotes"><i class="fa-regular fa-comment-dots"></i> Dietary Restrictions or Special Occasions</label>
-              <textarea id="resNotes" class="form-control" rows="2" placeholder="Birthday, anniversary, gluten intolerance, etc. (Optional)"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block res-submit-btn" id="submitResBtn">
-              <i class="fa-regular fa-circle-check"></i>
-              <span>Confirm Reservation</span>
-            </button>
-            <p class="form-disclaimer">Instant confirmation with no deposit required. Free cancellation up to 1 hour prior.</p>
-          </form>
+          </div>
         </div>
 
-        <!-- Location, Live Hours & Map Details -->
-        <div class="visit-info-col reveal-right">
-          <div class="info-card">
-            <div class="info-card-header">
-              <div class="section-tag">FIND US IN SOHO</div>
-              <h3 class="info-title">Hours & Location</h3>
-            </div>
-
-            <!-- Live Status Banner -->
-            <div class="live-hours-card" id="liveHoursCard">
-              <div class="live-indicator-row">
-                <div class="live-pill active">
-                  <span class="pulse-dot"></span>
-                  <span id="currentStatusText">Open Now</span>
-                </div>
-                <div class="live-time-display" id="liveTimeDisplay">New York Time: --:--</div>
-              </div>
-              <p class="live-subtext" id="liveClosingNotice">Open today until 10:00 PM · Kitchen closes at 9:00 PM</p>
-            </div>
-
-            <div class="details-list">
-              <div class="detail-item">
-                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="detail-content">
-                  <h5>SoHo Flagship</h5>
-                  <p>412 West Broadway, New York, NY 10012</p>
-                  <span class="sub-transit">Subway: Spring St (C, E) or Prince St (N, R, W)</span>
-                </div>
-              </div>
-
-              <div class="detail-item">
-                <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
-                <div class="detail-content">
-                  <h5>Opening Hours</h5>
-                  <ul class="hours-list">
-                    <li><span>Monday – Thursday:</span> <strong>7:00 AM – 8:00 PM</strong></li>
-                    <li><span>Friday:</span> <strong>7:00 AM – 10:00 PM</strong></li>
-                    <li><span>Saturday – Sunday:</span> <strong>8:00 AM – 10:00 PM</strong></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="detail-item">
-                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="detail-content">
-                  <h5>Direct Inquiries</h5>
-                  <p><a href="tel:+12125550194">+1 (212) 555-0194</a></p>
-                  <p><a href="mailto:concierge@lauracafe.com">concierge@lauracafe.com</a></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Google Map Interactive Embed -->
-            <div class="map-embed-container">
-              <iframe
-                title="L'Aura SoHo Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.5187748443903!2d-74.0042468233767!3d40.72591693659779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598c4749f7cf%3A0xb761614db28c1199!2s412%20W%20Broadway%2C%20New%20York%2C%20NY%2010012!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus"
-                width="100%"
-                height="230"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-              <a href="https://maps.google.com/?q=412+West+Broadway+New+York+NY" target="_blank" rel="noopener noreferrer" class="map-overlay-btn">
-                <i class="fa-solid fa-diamond-turn-right"></i> Open in Maps
-              </a>
-            </div>
-          </div>
+        <!-- Map Column -->
+        <div class="map-clean-wrapper">
+          <iframe
+            title="Amara Indiranagar Bengaluru Location Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9863836371587!2d77.64016667507647!3d12.972704387342618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a77e5d87b9%3A0x6b77ecb0a5e8e8e7!2s12th%20Main%20Rd%2C%20Indiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1711200000000!5m2!1sen!2sin"
+            width="100%"
+            height="320"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <a href="https://maps.google.com/?q=12th+Main+Road+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="map-link-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Google Maps
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= TASTING BAG / ORDER DRAWER ================= -->
-  <div class="drawer-backdrop" id="bagBackdrop"></div>
-  <aside class="tasting-bag-drawer" id="tastingBagDrawer">
-    <div class="bag-header">
-      <div class="bag-title-wrap">
-        <i class="fa-solid fa-mug-hot"></i>
-        <h3>Your Tasting Tray</h3>
-      </div>
-      <button class="bag-close-btn" id="closeBagBtn" aria-label="Close Tasting Tray">&times;</button>
-    </div>
-
-    <div class="bag-body" id="bagItemsList">
-      <!-- Injected dynamically -->
-    </div>
-
-    <div class="bag-footer">
-      <div class="bag-totals">
-        <div class="total-row subtotal">
-          <span>Subtotal</span>
-          <span id="bagSubtotal">$0.00</span>
-        </div>
-        <div class="total-row tax">
-          <span>Est. Sales Tax (8.875%)</span>
-          <span id="bagTax">$0.00</span>
-        </div>
-        <div class="total-row grand-total">
-          <span>Estimated Total</span>
-          <span id="bagGrandTotal" class="gold-amount">$0.00</span>
-        </div>
-      </div>
-
-      <button class="btn btn-primary btn-block checkout-btn" id="checkoutBtn">
-        <i class="fa-solid fa-bell-concierge"></i>
-        <span>Order for Table / Bar Pickup</span>
-      </button>
-      <button class="btn-clear-bag" id="clearBagBtn">Clear Tasting Tray</button>
-    </div>
-  </aside>
-
-  <!-- ================= RESERVATION CONFIRMATION MODAL ================= -->
+  <!-- ================= CONFIRMATION MODAL ================= -->
   <div class="modal-backdrop" id="confirmationModal">
     <div class="modal-card">
-      <button class="modal-close" id="confirmModalClose">&times;</button>
-      <div class="ticket-header">
-        <div class="ticket-stamp">L'AURA CONFIRMED</div>
-        <i class="fa-regular fa-circle-check ticket-icon"></i>
-        <h3>Table Reservation Confirmed</h3>
-        <p>Your sanctuary seat has been reserved. A confirmation SMS & calendar invite have been dispatched.</p>
+      <button class="modal-close" id="confirmModalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-header-icon">
+        <i class="fa-regular fa-circle-check"></i>
+      </div>
+      <h3 class="modal-title">Table Reserved!</h3>
+      <p class="modal-sub">Your table at AMARA Bengaluru is confirmed. We look forward to hosting you.</p>
+
+      <div class="ticket-simple" id="ticketDetailsBox">
+        <!-- Injected via JavaScript -->
       </div>
 
-      <div class="ticket-details-box" id="ticketDetailsBox">
-        <!-- Injected dynamically -->
-      </div>
-
-      <div class="ticket-actions">
-        <button class="btn btn-primary" id="saveTicketBtn">
-          <i class="fa-regular fa-bookmark"></i> Save Confirmation
-        </button>
-        <button class="btn btn-outline" id="dismissTicketBtn">Done</button>
+      <div class="modal-btn-row">
+        <button class="btn btn-primary btn-block" id="dismissTicketBtn">Got It, See You Soon</button>
       </div>
     </div>
   </div>
@@ -712,72 +486,41 @@
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container footer-container">
-      <div class="footer-top-grid">
-        <!-- Brand Summary -->
-        <div class="footer-col brand-col">
-          <div class="footer-logo">L'AURA<span class="logo-dot">.</span></div>
+      <div class="footer-simple-grid">
+        <div class="footer-brand-box">
+          <div class="footer-logo">AMARA<span class="logo-dot">.</span></div>
           <p class="footer-tagline">
-            Specialty coffee roastery, French viennoiserie, and slow architectural living. Designed for the curious palate.
+            Botanical café and micro-roastery celebrating single-estate coffees of the Western Ghats.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" class="social-link" aria-label="Spotify Roastery Playlist"><i class="fa-brands fa-spotify"></i></a>
-            <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Spotify Playlist"><i class="fa-brands fa-spotify"></i></a>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Sanctuary</h4>
-          <ul class="footer-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">Our Story & Roastery</a></li>
-            <li><a href="#menu">Curated Menu</a></li>
-            <li><a href="#gallery">Atmosphere & Visuals</a></li>
-            <li><a href="#visit">Table Reservations</a></li>
+        <div class="footer-links-box">
+          <h4>Sanctuary</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Café Menu</a></li>
+            <li><a href="#gallery">Spaces & Atmosphere</a></li>
+            <li><a href="#reserve">Table Reservation</a></li>
+            <li><a href="#visit">Indiranagar Location</a></li>
           </ul>
         </div>
 
-        <!-- Hours & Offerings -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Rituals</h4>
-          <ul class="footer-links">
-            <li><a href="#menu">Geisha Pour-Over Flights</a></li>
-            <li><a href="#menu">Viennoiserie Bakery</a></li>
-            <li><a href="#menu">Weekend Hearth Brunch</a></li>
-            <li><a href="#visit">Private Cupping Workshops</a></li>
-            <li><a href="#visit">Wholesale Direct Micro-lots</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter Subscription -->
-        <div class="footer-col newsletter-col">
-          <h4 class="footer-heading">The Roasters Circle</h4>
-          <p>Subscribe for rare micro-lot releases, private cupping invitations, and seasonal tasting notes.</p>
-          <form id="newsletterForm" class="newsletter-form">
-            <div class="newsletter-input-group">
-              <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
-              <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-            <span class="newsletter-privacy">We respect your inbox. Unsubscribe anytime.</span>
-          </form>
+        <div class="footer-hours-box">
+          <h4>Hours & Enquiries</h4>
+          <p>Mon – Fri: 7:30 AM – 10:30 PM</p>
+          <p>Sat – Sun: 7:00 AM – 11:00 PM</p>
+          <p class="footer-contact">12th Main, Indiranagar, Bengaluru · +91 80 4123 8899</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div class="copyright">
-          &copy; 2026 L'Aura Roastery & Café LLC. All Rights Reserved. Crafted with reverence.
-        </div>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="#">Terms of Service</a>
-          <span>&bull;</span>
-          <a href="#">Accessibility</a>
-        </div>
+        <p>&copy; 2026 AMARA Botanical Roastery & Café. Crafted for Bengaluru.</p>
+        <p class="footer-subtext">All prices in Indian Rupees (₹). Direct trade coffees.</p>
       </div>
     </div>
   </footer>

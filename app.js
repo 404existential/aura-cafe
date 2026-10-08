@@ -1,6 +1,6 @@
 /**
  * AMARA BOTANICAL ROASTERY & CAFÉ — BENGALURU
- * Clean, lightweight client logic for navigation, menu filtering, and table reservations.
+ * Clean, lightweight client logic for navigation, editorial menu, and table reservations.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,36 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const preloaderText = document.getElementById('preloaderText');
 
   let progress = 0;
-  const steps = [
-    { target: 40, text: 'Selecting Chikmagalur estate beans...' },
-    { target: 80, text: 'Small-batch roasting in Indiranagar...' },
-    { target: 100, text: 'Welcome to AMARA.' }
-  ];
-
-  let stepIdx = 0;
   const timer = setInterval(() => {
-    if (stepIdx < steps.length) {
-      progress += 5;
-      if (progress >= steps[stepIdx].target) {
-        if (preloaderText) preloaderText.textContent = steps[stepIdx].text;
-        stepIdx++;
-      }
-      if (preloaderProgress) preloaderProgress.style.width = `${Math.min(progress, 100)}%`;
-    }
+    progress += 8;
+    if (preloaderProgress) preloaderProgress.style.width = `${Math.min(progress, 100)}%`;
 
     if (progress >= 100) {
       clearInterval(timer);
       setTimeout(() => {
         if (preloader) preloader.classList.add('fade-out');
-      }, 350);
+      }, 250);
     }
-  }, 25);
+  }, 20);
 
   setTimeout(() => {
     if (preloader && !preloader.classList.contains('fade-out')) {
       preloader.classList.add('fade-out');
     }
-  }, 1800);
+  }, 1200);
 
 
   /* ==========================================================
@@ -55,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-    if (scrollY > 40) {
+    if (scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -99,165 +86,148 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================
-     4. CONCISE BENGALURU-BASED MENU (CLEAN & SHORT)
+     4. EDITORIAL MENU (CLASSIC CAFÉ DOT-LEADER FORMAT)
      ========================================================== */
-  const menuItems = [
-    // Espresso & Milk
-    {
-      category: 'espresso',
-      name: 'AMARA Signature Flat White',
-      tag: 'Best Seller',
-      desc: 'Double shot Chikmagalur Arabica with textured creamy whole milk.',
-      price: '₹260'
-    },
-    {
-      category: 'espresso',
-      name: 'Cardamom & Jaggery Cortado',
-      tag: 'Signature',
-      desc: 'Equal parts estate espresso and warm milk with organic Coorg jaggery.',
-      price: '₹280'
-    },
-    {
-      category: 'espresso',
-      name: 'Classic Estate Cappuccino',
-      tag: '',
-      desc: 'Silky microfoam over dark chocolate and hazelnut noted espresso.',
-      price: '₹250'
-    },
-    {
-      category: 'espresso',
-      name: 'Iced Vanilla Bean Latte',
-      tag: '',
-      desc: 'Madagascar vanilla syrup, cold milk, and slow-poured espresso over ice.',
-      price: '₹310'
-    },
+  const menuData = {
+    coffee: [
+      {
+        name: 'AMARA Flat White',
+        price: '₹260',
+        badge: 'Signature',
+        desc: 'Double shot estate Arabica with velvety microfoam.'
+      },
+      {
+        name: 'Cardamom & Jaggery Cortado',
+        price: '₹280',
+        badge: 'House Special',
+        desc: 'Equal parts espresso and warm milk with organic Coorg jaggery.'
+      },
+      {
+        name: 'Estate Cappuccino',
+        price: '₹250',
+        badge: '',
+        desc: 'Rich extraction with dark chocolate and roasted hazelnut notes.'
+      },
+      {
+        name: 'Balur Estate V60 Pour-Over',
+        price: '₹320',
+        badge: 'Single Origin',
+        desc: 'Washed Arabica highlighting delicate sweet lime and honey floral notes.'
+      },
+      {
+        name: 'Honey-Sun Aeropress',
+        price: '₹340',
+        badge: 'Rare Lot',
+        desc: 'Naturally dried Western Ghats beans with ripe stone fruit notes.'
+      },
+      {
+        name: '24-Hour Cold Drip',
+        price: '₹330',
+        badge: '',
+        desc: 'Slow drop-by-drop extraction over hand-cut crystal ice.'
+      }
+    ],
+    bakery: [
+      {
+        name: 'French Butter Croissant',
+        price: '₹240',
+        badge: 'Fresh Daily',
+        desc: 'Golden flaky layers baked fresh every morning with Normandy butter.'
+      },
+      {
+        name: 'Pistachio Almond Croissant',
+        price: '₹320',
+        badge: '',
+        desc: 'Twice-baked with roasted nut frangipane and powdered sugar.'
+      },
+      {
+        name: 'Dark Chocolate Sea Salt Babka',
+        price: '₹280',
+        badge: '',
+        desc: 'Braided brioche infused with 70% Indian cacao and Maldon salt.'
+      },
+      {
+        name: 'Truffle Poached Egg Brioche',
+        price: '₹440',
+        badge: 'Brunch',
+        desc: 'Avocado mash, free-range poached egg, and truffle emulsion on brioche.'
+      },
+      {
+        name: 'Whipped Ricotta & Fig Toast',
+        price: '₹390',
+        badge: '',
+        desc: 'Wild honey, seasonal fresh figs, and toasted artisan sourdough.'
+      },
+      {
+        name: 'Wild Forest Mushroom Tartine',
+        price: '₹410',
+        badge: 'Vegetarian',
+        desc: 'Pan-seared mushrooms, thyme garlic cream, and fresh garden herbs.'
+      }
+    ],
+    teas: [
+      {
+        name: 'Espresso Tonic & Sweet Orange',
+        price: '₹320',
+        badge: 'Chilled',
+        desc: 'Chilled espresso poured over botanical tonic and dehydrated citrus.'
+      },
+      {
+        name: 'Ceremonial Uji Iced Matcha',
+        price: '₹360',
+        badge: 'First Harvest',
+        desc: 'Whisked Japanese green tea with cold oat milk and light agave.'
+      },
+      {
+        name: 'Cascara Sparkling Spritz',
+        price: '₹290',
+        badge: 'Zero Waste',
+        desc: 'Brewed coffee cherry husk infusion with sparkling soda and rosemary.'
+      },
+      {
+        name: 'Silver Needle White Tea',
+        price: '₹280',
+        badge: 'Whole Leaf',
+        desc: 'Gentle whole-leaf steep with delicate floral notes and honey aroma.'
+      }
+    ]
+  };
 
-    // Single Estate Manual Brews
-    {
-      category: 'pourover',
-      name: 'Chikmagalur Balur Estate V60',
-      tag: 'Single Origin',
-      desc: 'Washed Arabica with bright notes of sweet lime, honey, and jasmine.',
-      price: '₹320'
-    },
-    {
-      category: 'pourover',
-      name: 'Coorg Honey-Sun Natural Aeropress',
-      tag: 'Rare Lot',
-      desc: 'Naturally processed hill coffee with deep blackcurrant and cacao notes.',
-      price: '₹340'
-    },
-    {
-      category: 'pourover',
-      name: '24-Hour Cold Drip Kaapi',
-      tag: 'Slow Brew',
-      desc: 'Cold extracted drop-by-drop through glass towers. Served neat over clear ice.',
-      price: '₹330'
-    },
-
-    // Artisanal Bakes
-    {
-      category: 'bakery',
-      name: 'French Butter Croissant',
-      tag: 'Fresh Daily',
-      desc: 'Golden flaky layers baked fresh every morning with Normandy butter.',
-      price: '₹240'
-    },
-    {
-      category: 'bakery',
-      name: 'Twice-Baked Pistachio Almond Croissant',
-      tag: 'Chef Pick',
-      desc: 'Filled with roasted nut frangipane and dusted with powdered sugar.',
-      price: '₹320'
-    },
-    {
-      category: 'bakery',
-      name: 'Dark Chocolate Sea Salt Babka',
-      tag: '',
-      desc: 'Braided brioche infused with 70% Indian dark chocolate and Maldon salt.',
-      price: '₹280'
-    },
-
-    // Hearth Brunch
-    {
-      category: 'brunch',
-      name: 'Truffle Poached Egg Brioche',
-      tag: 'Signature',
-      desc: 'Avocado mash, free-range poached egg, and truffle oil on toasted brioche.',
-      price: '₹440'
-    },
-    {
-      category: 'brunch',
-      name: 'Whipped Ricotta & Fig Toast',
-      tag: '',
-      desc: 'Local wild honey, fresh figs, and house-made sourdough toast.',
-      price: '₹390'
-    },
-    {
-      category: 'brunch',
-      name: 'Wild Mushroom Tartine',
-      tag: 'Vegetarian',
-      desc: 'Pan-seared forest mushrooms, garlic thyme cream, and microgreens.',
-      price: '₹410'
-    },
-
-    // Cold Sips & Botanicals
-    {
-      category: 'refreshers',
-      name: 'Espresso Tonic with Sweet Orange',
-      tag: 'Refreshing',
-      desc: 'Chilled estate espresso floated over artisanal tonic and citrus slice.',
-      price: '₹320'
-    },
-    {
-      category: 'refreshers',
-      name: 'Ceremonial Uji Iced Matcha Latte',
-      tag: 'Japanese Grade',
-      desc: 'First harvest green tea whisked fresh with oat milk and agave.',
-      price: '₹360'
-    },
-    {
-      category: 'refreshers',
-      name: 'Bengaluru Cascara Sparkling Spritz',
-      tag: 'Zero Waste',
-      desc: 'Brewed coffee-cherry husk with sparkling soda and rosemary.',
-      price: '₹290'
-    }
-  ];
-
-  const menuGrid = document.getElementById('menuGrid');
+  const menuContainer = document.getElementById('editorialMenuContainer');
   const menuTabs = document.querySelectorAll('.menu-tab-btn');
-  let currentCategory = 'all';
+  let currentCategory = 'coffee';
 
-  function renderMenu() {
-    if (!menuGrid) return;
+  function renderEditorialMenu() {
+    if (!menuContainer) return;
 
-    const filtered = menuItems.filter(item => {
-      return currentCategory === 'all' || item.category === currentCategory;
-    });
-
-    menuGrid.innerHTML = filtered.map(item => `
-      <div class="menu-item-row">
-        <div class="menu-item-details">
-          <div class="menu-item-title">
-            <span>${item.name}</span>
-            ${item.tag ? `<span class="menu-tag-badge">${item.tag}</span>` : ''}
+    const items = menuData[currentCategory] || [];
+    menuContainer.innerHTML = `
+      <div class="menu-dual-columns">
+        ${items.map(item => `
+          <div class="editorial-menu-item">
+            <div class="item-top-row">
+              <span class="item-name">
+                ${item.name}
+                ${item.badge ? `<span class="item-badge">${item.badge}</span>` : ''}
+              </span>
+              <span class="item-dots"></span>
+              <span class="item-price">${item.price}</span>
+            </div>
+            <p class="item-desc">${item.desc}</p>
           </div>
-          <p class="menu-item-desc">${item.desc}</p>
-        </div>
-        <div class="menu-item-price">${item.price}</div>
+        `).join('')}
       </div>
-    `).join('');
+    `;
   }
 
-  renderMenu();
+  renderEditorialMenu();
 
   menuTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       menuTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       currentCategory = tab.getAttribute('data-category');
-      renderMenu();
+      renderEditorialMenu();
     });
   });
 
@@ -272,7 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const dismissTicketBtn = document.getElementById('dismissTicketBtn');
   const ticketDetailsBox = document.getElementById('ticketDetailsBox');
 
-  // Set default date to tomorrow
   if (bookDateInput) {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -303,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (ticketDetailsBox) {
         ticketDetailsBox.innerHTML = `
           <div class="ticket-item">
-            <span>Booking ID:</span>
+            <span>Booking Ref:</span>
             <strong>#${bookingRef}</strong>
           </div>
           <div class="ticket-item">
@@ -311,16 +280,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <strong>${name}</strong>
           </div>
           <div class="ticket-item">
-            <span>Contact (WhatsApp/SMS):</span>
+            <span>Phone:</span>
             <strong>${phone}</strong>
           </div>
           <div class="ticket-item">
             <span>When:</span>
-            <strong>${formattedDate} at ${time}</strong>
+            <strong>${formattedDate} · ${time}</strong>
           </div>
           <div class="ticket-item">
-            <span>Party Size & Seating:</span>
-            <strong>${guests} ${guests === '1' ? 'Guest' : 'Guests'} · ${area}</strong>
+            <span>Party & Area:</span>
+            <strong>${guests} ${guests === '1' ? 'Guest' : 'Guests'} (${area})</strong>
           </div>
           ${note ? `
           <div class="ticket-item">
@@ -332,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       confirmationModal.classList.add('open');
       document.body.classList.add('lock-scroll');
-      showToast(`Table confirmed for ${name}! Ref: #${bookingRef}`);
+      showToast(`Reservation #${bookingRef} confirmed for ${name}!`);
       easyReserveForm.reset();
     });
   }
@@ -368,10 +337,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================
-     7. SCROLL REVEAL ANIMATIONS
+     7. SCROLL ACTIVE LINK & REVEALS
      ========================================================== */
-  const revealElements = document.querySelectorAll('.reveal-fade, .reveal-left, .reveal-right');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
 
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  const revealElements = document.querySelectorAll('.reveal-fade, .reveal-left, .reveal-right');
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

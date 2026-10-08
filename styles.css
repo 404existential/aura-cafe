@@ -773,7 +773,8 @@ button, input, select, textarea {
   font-size: 1.18rem;
   font-weight: 600;
   color: var(--text-main);
-  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 80%;
 }
 
 .item-dots {
@@ -782,6 +783,7 @@ button, input, select, textarea {
   margin: 0 4px;
   position: relative;
   top: -4px;
+  min-width: 12px;
 }
 
 .item-price {
@@ -1230,6 +1232,11 @@ button, input, select, textarea {
   .story-image-column {
     max-width: 480px;
     margin: 0 auto;
+    width: 100%;
+  }
+
+  .story-img {
+    height: 320px;
   }
 
   .menu-dual-columns {
@@ -1251,12 +1258,20 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+
   .nav-links, .btn-nav {
     display: none;
   }
 
   .mobile-toggle {
     display: flex;
+  }
+
+  .section {
+    padding: 70px 0;
   }
 
   .story-values-strip {
@@ -1278,5 +1293,102 @@ button, input, select, textarea {
 
   .footer-layout {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
+
+@media (max-width: 540px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .live-status-pill .status-text {
+    display: none;
+  }
+
+  .live-status-pill {
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  .hero-section {
+    min-height: 82vh;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 26px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .story-img {
+    height: 240px;
+  }
+
+  .editorial-menu-board {
+    padding: 20px 14px;
+    border-radius: 6px;
+  }
+
+  .item-dots {
+    display: none;
+  }
+
+  .item-name {
+    font-size: 1.1rem;
+    max-width: 72%;
+  }
+
+  .item-price {
+    font-size: 1.1rem;
+    margin-left: auto;
+  }
+
+  .gallery-clean-card img {
+    height: 200px;
+  }
+
+  .reserve-wrap {
+    padding: 20px 14px;
+    border-radius: 6px;
+  }
+
+  .field-item input, .field-item select {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .reserve-btn {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .modal-card {
+    max-width: calc(100vw - 30px);
+    padding: 24px 16px;
+  }
+
+  .toast-container {
+    right: 14px;
+    bottom: 16px;
+    left: 14px;
+  }
+
+  .toast {
+    max-width: 100%;
+  }
+}
+

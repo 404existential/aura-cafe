@@ -6,3 +6,4 @@ node_modules/
 dist/
 .vscode/
 .idea/
+push-to-github.ps1
